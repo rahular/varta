@@ -1,0 +1,16 @@
+# move this to /t5x/examples/t5/t5_1_1/examples
+
+include 't5x/examples/t5/t5_1_1/small.gin'
+include 't5x/configs/runs/pretrain.gin'
+
+# Register necessary SeqIO Tasks/Mixtures.
+import t5.data.mixtures
+import t5x.examples.t5.tasks
+
+USE_CACHED_TASKS = False
+MIXTURE_OR_TASK_NAME = "varta_pegasus"
+
+TASK_FEATURE_LENGTHS = {"inputs": 512, "targets": 256}
+TRAIN_STEPS = 2000000
+DROPOUT_RATE = 0.0
+BATCH_SIZE = 256
