@@ -48,4 +48,13 @@ The code for all finetuning experiments reported in the paper is placed under th
 We use the multilingual variant of ROUGE [implemented](https://github.com/csebuetnlp/xl-sum/tree/master/multilingual_rouge_scoring) for the xl-sum paper for the evaluations of the headline generation and abstractive summarization tasks in our experiments. 
 
 ### Citation
-Coming soon.
+```
+@misc{aralikatte2023varta,
+      title={V\=arta: A Large-Scale Headline-Generation Dataset for Indic Languages}, 
+      author={Rahul Aralikatte and Ziling Cheng and Sumanth Doddapaneni and Jackie Chi Kit Cheung},
+      year={2023},
+      eprint={2305.05858},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
