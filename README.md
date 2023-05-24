@@ -2,8 +2,21 @@
 
 This repository contains the code and other resources for the paper published in the Findings of ACL 2023.
 
+<p align="center">
+  <a href=""><img src="https://img.shields.io/badge/ACL-2023%20Findings-blue"></a>
+  <a href="https://github.com/rahular/varta/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/Apache%202.0-green">
+  </a>
+</p>
+
+[**Dataset**](#dataset) |
+[**Pretrained Models**](#pretrained-models) |
+[**Finetuning**](#finetuning-experiments) |
+[**Evaluation**](#evaluation) |
+[**Citation**](#citation)
+
 ### Dataset
-The Vārta dataset is currently available in [this](https://console.cloud.google.com/storage/browser/varta-eu/data-release) bucket. We release train, validation, and test files in JSONL format. Each article object contains: 
+The Vārta dataset is available on the [Huggingface Hub](https://github.com/rahular/varta). We release train, validation, and test files in JSONL format. Each article object contains: 
   - `id`: unique identifier for the artilce on DailyHunt. This id will be used to recreate the dataset.
   - `langCode`: ISO 639-1 language code
   - `source_url`: the url that points to the article on the website of the original publisher
@@ -29,10 +42,15 @@ The `train`, `val`, and `test` folders contain language-specific json files and 
   - `langwise`: 
     - `val_<lang>.json`: language-wise validation files
 
+*Note*: if you don't want to download the whole dataset, and just want one file, you can do something like
+```
+wget https://huggingface.co/datasets/rahular/varta/raw/main/varta/<split>/langwise/<split>_<lang>.json
+```
+
 ### Pretrained Models
 - We release the Varta-T5 model in multiple formats:
-  - For tensorflow, in the t5x format ([link](https://console.cloud.google.com/storage/browser/varta-eu/t5x))
-  - For pytorch, as a HF model ([link](https://huggingface.co/rahular/varta-t5))
+  - For tensorflow, in the t5x format ([t5-small](https://console.cloud.google.com/storage/browser/varta-eu/t5x/varta-t5-small-ckpts), [t5-base](https://console.cloud.google.com/storage/browser/varta-eu/t5x/varta-t5-base-ckpts))
+  - For pytorch, as a HF model ([t5-small](https://huggingface.co/rahular/varta-t5-small), [t5-base](https://huggingface.co/rahular/varta-t5))
 - We release Varta-BERT only in pytorch as a HF model ([link](https://huggingface.co/rahular/varta-bert))
 
 The code for:
