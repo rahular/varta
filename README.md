@@ -16,7 +16,7 @@ This repository contains the code and other resources for the paper published in
 [**Citation**](#citation)
 
 ### Dataset
-The Vārta dataset is available on the [Huggingface Hub](https://github.com/rahular/varta). We release train, validation, and test files in JSONL format. Each article object contains: 
+The Vārta dataset is available on the [Huggingface Hub](https://huggingface.co/datasets/rahular/varta). We release train, validation, and test files in JSONL format. Each article object contains: 
   - `id`: unique identifier for the artilce on DailyHunt. This id will be used to recreate the dataset.
   - `langCode`: ISO 639-1 language code
   - `source_url`: the url that points to the article on the website of the original publisher
