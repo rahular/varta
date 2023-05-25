@@ -1,5 +1,5 @@
 {
-    "model_name_or_path": "varta/t5-base-1M",
+    "model_name_or_path": "rahular/varta-t5",
     "dataset_name": "ai4bharat/IndicParaphrase",
     "text_column": "input",
     "summary_column": "target",
@@ -16,7 +16,7 @@
     "num_beams": 4,
     "ignore_pad_token_for_loss": true,
     "use_fast_tokenizer": false,
-    "output_dir": "models/varta-t5-1M-paraphrase-run2",
+    "output_dir": "models/varta-t5-paraphrase",
     "overwrite_output_dir": true,
     "do_train": true,
     "do_eval": true,
@@ -53,7 +53,7 @@
     "ddp_find_unused_parameters": false,
     "ddp_timeout": 172800,
     "report_to": "wandb",
-    "run_name": "varta-t5-1M-paraphrase",
+    "run_name": "varta-t5-paraphrase",
     "skip_memory_metrics": false,
     "auto_find_batch_size": true,
     "predict_with_generate": true

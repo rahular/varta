@@ -5,7 +5,7 @@ MODEL_DIR=models/varta_all_run3
 OUTPUT_DIR=models/varta_xlsum_hg_run3
 # evaluate the finetuned model from Varta on xlsum
 for lg in bengali english gujarati hindi marathi nepali punjabi sinhala tamil telugu urdu; do  # en
-	python run_sum.py   --model_name_or_path=${MODEL_DIR}/checkpoint-18000 \
+	python run_sum.py   --model_name_or_path=${MODEL_DIR} \
                         --dataset_name=csebuetnlp/xlsum \
                         --lang=${lg} \
 			--xlsum_hg=true \

@@ -6,7 +6,7 @@ echo "Doing prediction for ${MODEL_DIR}..."
 declare -A languages=( ["as"]="assamese" ["bh"]="bhojpuri" ["bn"]="bengali" ["gu"]="gujarati" ["hi"]="hindi" ["kn"]="kannada" ["ml"]="malayalam" ["mr"]="marathi" ["ne"]="nepali" ["or"]="oriya" ["pa"]="panjabi" ["ta"]="tamil" ["te"]="telugu" ["ur"]="urdu" )
 
 for lg in as bh bn en gu hi kn ml mr ne or pa ta te ur; do  # en
-	python run_sum.py   --model_name_or_path=${MODEL_DIR}/checkpoint-23500 \
+	python run_sum.py   --model_name_or_path=${MODEL_DIR} \
                         --text_column=text \
                         --summary_column=headline \
                         --test_file=${TEST_DIR}/test_${lg}.json \
