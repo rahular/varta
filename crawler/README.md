@@ -3,7 +3,7 @@
 This crawler scrapes news articles from DailyHunt.
 
 To recreate the dataset:
-- Download files from [Huggingface Hub](https://github.com/rahular/varta-urls) by doing `wget https://huggingface.co/datasets/rahular/varta/raw/main/varta/<split>/<split>.json`
+- Download files from [Huggingface Hub](https://huggingface.co/datasets/rahular/varta-urls) by doing `wget https://huggingface.co/datasets/rahular/varta/raw/main/varta/<split>/<split>.json`
 - Set the `INFILE` in `settings.py` to the path of the file you want to recreate; change `OUTFILE` to the path where you want the data to be saved
 - The output file will contain the following keys:
     - `id`: unique identifier of the article in the format of "nxxxxxxxxx"
