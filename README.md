@@ -17,14 +17,25 @@ This repository contains the code and other resources for the paper published in
 
 ### Dataset
 The Vārta dataset is available on the [Huggingface Hub](https://huggingface.co/datasets/rahular/varta). We release train, validation, and test files in JSONL format. Each article object contains: 
-  - `id`: unique identifier for the artilce on DailyHunt. This id will be used to recreate the dataset.
-  - `langCode`: ISO 639-1 language code
-  - `source_url`: the url that points to the article on the website of the original publisher
-  - `dh_url`: the url that points to the article on DailyHunt
+- `id:` unique identifier for the artilce on DailyHunt. This id will be used to recreate the dataset.
+- `langCode`: ISO 639-1 language code
+- `source_url`: the url that points to the article on the website of the original publisher
+- `dh_url`: the url that points to the article on DailyHunt
+- `id`: unique identifier for the artilce on DailyHunt.
+- `url`: the url that points to the article on DailyHunt
+- `headline`: headline of the article
+- `publication_date`: date of publication
+- `text`: main body of the article
+- `tags`: main topics related to the article
+- `reactions`: user likes, dislikes, etc.
+- `source_media`: original publisher name
+- `source_url`: the url that points to the article on the website of the original publisher
+- `word_count`: number of words in the article
+- `langCode`: language of the article
 
 To recreate the dataset, follow this [README file](https://github.com/rahular/varta/tree/main/crawler#README.md).
 
-The `train`, `val`, and `test` folders contain language-specific json files and one aggregated file. However, the `train` folder has multiple aggregated training files for different experiments. The data is structured as follows:
+The `train`, `val`, and `test` folders contain language-specific json files and one aggregated file. However, the `train` folder has multiple aggregated training files for different experiments (you will have to recreate them). The data is structured as follows:
 - `train`:
   - `train.json`: large training file
   - `train_small.json`: small training file; training file for the *all* experiments
